@@ -1,0 +1,29 @@
+  .d-block{
+    position: sticky;
+
+  }
+
+.carousel-item {
+    height: 100vh;
+    min-height: 350px;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+img {
+    opacity: 0.9;
+    filter: alpha(opacity=90); /* For IE8 and earlier */
+  }
+
+h1{
+  font-family: 'Quicksand', sans-serif;
+  font-size: 500%;
+}
+
+.carousel-caption{
+  bottom: 64.5%;
+}
+ 
+  

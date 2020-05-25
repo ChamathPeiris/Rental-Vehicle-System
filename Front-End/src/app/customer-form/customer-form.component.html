@@ -1,0 +1,80 @@
+<link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
+
+
+	<div id="booking" class="section">
+		<div class="section-center">
+			<div class="container">
+				<div class="row">
+					<div class="booking-form">
+						<div class="form-header">
+							<h1>Make your reservation</h1>
+						</div>
+						<form #form="ngForm" (submit)="onSubmit(form)">
+
+							<div class="form-group">
+								<div><span class="form-label">Full Name</span></div>
+								<input class="form-control" type="fullName" placeholder="Enter Your Full Name" name ="cusName" 
+								#FullName= "ngModel" 
+								[(ngModel)]= "service.formData.cusName" nullable=false>	
+                            </div>
+
+                            <div class="form-group">
+								<div><span class="form-label">Phone Number</span></div>
+								<input class="form-control" type="phoneNumber" placeholder="Enter your Phone Number"
+								name ="cusPhoneNb"
+								#cusPhoneNb= "ngModel" 
+								[(ngModel)]= "service.formData.cusPhoneNb">
+                            </div>
+
+                            <div class="form-group">
+                            <div><span class="form-label">Email</span></div>
+								<input class="form-control" type="email" placeholder="Enter your Email"
+								name ="cusEmail"
+								#cusEmail= "ngModel" 
+								[(ngModel)]= "service.formData.cusEmail">
+                            </div>
+
+                            <div class="form-group">
+								<div><span class="form-label">Lincense Number</span></div>
+								<input class="form-control" type="license" placeholder="Enter your license Number"
+								name ="licenseNumber"
+								#licenseNumber= "ngModel" 
+								[(ngModel)]= "service.formData.licenseNumber">
+								
+                            </div>
+
+							<div class="row">
+								<div class="col-md-6">
+									<div class="form-group">
+										<div><span class="form-label">Pick up Date</span></div>
+										<input class="form-control" type="date" required 
+										name ="pickUpDate"
+								#pickUpDate= "ngModel" 
+								[(ngModel)]= "service.formData.pickUpDate">
+										
+									</div>
+                                </div>
+                                
+								<div class="col-md-6">
+									<div class="form-group">
+										<div><span class="form-label">Drop off Date</span></div>
+										<input class="form-control" type="date" required
+										name ="dropOffDate"
+								#dropOffDate= "ngModel" 
+								[(ngModel)]= "service.formData.dropOffDate">
+										
+									</div>
+								</div>
+                            </div>
+                    
+							<div class="form-btn">
+								<button class="submit-btn" type="submit" [disabled]="form.invalid" >Book Now</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	
